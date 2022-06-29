@@ -1,0 +1,35 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-private-methods",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "services": "./src/services",
+          "utils": "./src/utils",
+          "models": "./src/models",
+          "controllers": "./src/controllers",
+          "middleware": "./src/middleware",
+          "helpers": "./src/helpers",
+          "configs": "./src/configs",
+          "plugins": "./src/plugins"
+        }
+      }
+    ]
+  ]
+}
